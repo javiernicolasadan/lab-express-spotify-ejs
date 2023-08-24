@@ -1,0 +1,12 @@
+<h2>Results</h2>
+<% artists.forEach(eachArtist => { %>
+<div style="border: 1px solid black">
+  <%- eachArtist.name %>
+  <br />
+  <% if (eachArtist.images[0]) { %>
+  <img src="<%- eachArtist.images[0].url %>" />
+  <% } %>
+  <button>view albums</button>
+</div>
+
+<% }) %>
