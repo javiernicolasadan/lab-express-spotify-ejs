@@ -1,0 +1,14 @@
+<h2>Albums</h2>
+<% albums.forEach(eachAlbum => { %>
+<div class="each-artist">
+
+    <h3><%- eachAlbum.name %></h3>
+    <br />
+    <img src="<%- eachAlbum.images[0].url %>"/>
+    <br />
+     <%  /* console.log("this is my album id", eachAlbum.id) */  %> 
+    <a href="<%-`/tracks/${eachAlbum.id}`%>">
+        <button>view tracks</button>
+      </a>
+    </div>
+    <% }) %>

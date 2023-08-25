@@ -1,0 +1,9 @@
+<h2>tracks</h2>
+<%- /* console.log("this are the trakcs in tracks.ejs", tracks)  */%>
+<% tracks.forEach(eachTrack => { %>
+    <%- /* console.log("Tracks in tracks.ejs", eachTrack.name) */ %>
+    <h3><%- eachTrack.name %></h3>
+<audio src="<%- eachTrack.preview_url %>" controls>
+
+</audio>
+<% })  %>

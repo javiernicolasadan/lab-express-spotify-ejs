@@ -1,12 +1,15 @@
 <h2>Results</h2>
 <% artists.forEach(eachArtist => { %>
-<div style="border: 1px solid black">
-  <%- eachArtist.name %>
+<div class="each-artist">
+  <h3><%- eachArtist.name %></h3>
   <br />
   <% if (eachArtist.images[0]) { %>
   <img src="<%- eachArtist.images[0].url %>" />
+  <br />
+  <a href="<%- `/albums/${eachArtist.id}` %>">
+    <button>view albums</button>
+  </a>
   <% } %>
-  <button>view albums</button>
 </div>
 
 <% }) %>
